@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #welcome { display: none; }
+    </style>
+</head>
+<body>
+
+
+<h1 id="welcome">Welcome to jQuery World</h1>
+<button><span id="icon">⬆️</span> Show</button>
+
+<script>
+$(document).ready(function(){
+
+    $("button").click(function(){
+        $("#welcome").slideToggle();
+
+        let icon = $("#icon");
+
+        if (icon.text() === "⬆️") {
+            icon.text("⬇️");
+            $(this).contents().last()[0].textContent = " Hide";
+        } else {
+            icon.text("⬆️");
+            $(this).contents().last()[0].textContent = " Show";
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
