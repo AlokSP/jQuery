@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Down Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        div {
+            display: none;
+            width: 450px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        #div1 {
+            background-color: yellow;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>SlideDown: It will display hidden elements</h1>
+
+<button id="btn">Slide Down</button>
+
+<div id="div1">
+    <h2>Welcome to jQuery Slide Down Content.</h2>
+</div>
+
+<script>
+$(document).ready(function () {
+    $("#btn").click(function () {
+        $("#div1").slideDown(500); // 500ms animation
+    });
+});
+</script>
+
+</body>
+</html>
