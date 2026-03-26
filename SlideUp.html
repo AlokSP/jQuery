@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Up Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        div {
+           
+            width: 450px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        #div1 {
+            background-color: yellow;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>SlideUp: It will  hide elements by sliding up</h1>
+
+<button id="btn">Slide Up</button>
+
+<div id="div1">
+    <h2>Welcome to jQuery Slide Up Content.</h2>
+</div>
+
+<script>
+$(document).ready(function () {
+    $("#btn").click(function () {
+        $("#div1").slideUp(500); // 500ms animation
+    });
+});
+</script>
+
+</body>
+</html>
