@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FadeOut Example</title>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        #div1 {
+            background-color: yellow;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div3 {
+            background-color: blue;
+            color: white;
+        }
+
+        #div4 {
+            background-color: red;
+            color: white;
+        }
+        button{
+            padding: 2px;
+            margin-bottom: 15px; 
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>FadeOut: It will hide the elements</h1>
+<button>Fade Out</button>
+
+<div id="div1">This is 1st div.</div>
+<div id="div2">This is 2nd div.</div>
+<div id="div3">This is 3rd div.</div>
+<div id="div4">This is 4th div.</div>
+
+<script>
+$(document).ready(function() {
+    $("button").click(function() {
+    $("#div1").fadeOut(500);
+    $("#div2").delay(1000).fadeOut(1000);
+    $("#div3").delay(1500).fadeOut(1000);
+    $("#div4").delay(2000).fadeOut(1000);
+});
+});
+</script>
+
+</body>
+</html>
