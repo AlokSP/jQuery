@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Toggle Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        div {
+           
+            width: 450px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        #div1 {
+            background-color: yellow;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>SlideToggle: It is used for both show and hide elements by sliding.</h1>
+
+<button id="btn">Slide Toggle</button>
+
+<div id="div1">
+    <h2>Welcome to jQuery Slide Up Content.</h2>
+</div>
+
+<script>
+$(document).ready(function () {
+    $("#btn").click(function () {
+        $("#div1").slideToggle(500); 
+    });
+});
+</script>
+
+</body>
+</html>
