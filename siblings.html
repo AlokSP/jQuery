@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Siblings Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        div {
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: black;
+            background-color: aquamarine;
+            position: relative; 
+            border: 2px solid rebeccapurple;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Siblings Examples</h1>
+
+<p>Here, we select h4 header to perform all operations</p>
+
+<div id="parent">
+    <h1>Welcome to h1 header.</h1>
+    <h2>Welcome to h2 header.</h2>
+    <h3>Welcome to h3 header.</h3>
+    <h4>Welcome to h4 header.</h4>
+    <h5>Welcome to h5 header.</h5>
+    <h6>Welcome to h6 header.</h6>
+
+    <div id="child">
+        <h2>Welcome to child div.</h2>
+    </div>
+</div>
+
+<button id="siblings">siblings</button>
+<button id="next">next</button>
+<button id="nextAll">nextAll</button>
+<button id="nextUntil">nextUntil</button>
+<button id="prev">prev</button>
+<button id="prevAll">prevAll</button>
+<button id="prevUntil">prevUntil</button>
+<button id="reset">Reset</button>
+
+<script>
+$(document).ready(function () {
+
+    function applyStyle(element) {
+        element.css({
+            "background": "green",
+            "color": "white",
+            "border": "3px solid yellow"
+        });
+    }
+
+    $("#siblings").click(function () {
+        applyStyle($("h4").siblings());
+    });
+
+    $("#next").click(function () {
+        applyStyle($("h4").next());
+    });
+
+    $("#nextAll").click(function () {
+        applyStyle($("h4").nextAll());
+    });
+
+    $("#nextUntil").click(function () {
+        applyStyle($("h4").nextUntil("h6"));
+    });
+
+    $("#prev").click(function () {
+        applyStyle($("h4").prev());
+    });
+
+    $("#prevAll").click(function () {
+        applyStyle($("h4").prevAll());
+    });
+
+    $("#prevUntil").click(function () {
+        applyStyle($("h4").prevUntil("h1"));
+    });
+
+    
+    $("#reset").click(function () {
+        $("h1, h2, h3, h4, h5, h6").css({
+            "background": "",
+            "color": "",
+            "border": ""
+        }
+    
+    );
+
+    $("#child").css({"background-color": 'aquamarine',  "border": "2px solid rebeccapurple", "color":"black"});
+
+    });
+
+});
+</script>
+
+</body>
+</html>
