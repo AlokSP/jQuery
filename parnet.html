@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parent Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        div {
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: black;
+            background-color: aquamarine;
+            position: relative; 
+            border: 2px solid rebeccapurple;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            cursor: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>parent(): It is used to select the direct parent element of the selected element.</h1>
+
+<button id="btn">Change Parent background-color</button>
+
+<div id="great_grand_parent">
+    <h2>Welcome to great_grand_parent div.</h2>
+    <div id="grand_parent">
+    <h2>Welcome to grand_parent div.</h2>
+    <div id="parent">
+    <h2>Welcome to parent div.</h2>
+    <div id="child">
+    <h2>Welcome to child div.</h2>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+$(document).ready(function () {
+    $("#btn").click(function () {
+        $("#child").parent().css({"background": "green","color": "white", "border": "3px solid yellow"});
+    });
+});
+</script>
+
+</body>
+</html>
